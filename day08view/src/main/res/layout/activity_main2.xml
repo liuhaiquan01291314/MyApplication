@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:xts="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+    <com.example.day08view.Ballview
+        android:background="#00f"
+        android:layout_width="match_parent"
+        android:layout_height="100dp" />
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_marginTop="10dp"
+        android:text="进度开始"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <com.example.day08view.MyProgressBar
+        android:id="@+id/myProgressBar"
+        android:background="#55000000"
+
+        xts:circleColor="@color/colorAccent"
+        xts:ringColor="@color/colorPrimary"
+        xts:ringWidth="20dp"
+        xts:sweepAngle="1"
+        xts:startAngle="-90"
+        android:text="@string/app_name"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:textColor="#ffffff"
+        android:layout_width="300dp"
+        android:layout_height="300dp" />
+</LinearLayout>
