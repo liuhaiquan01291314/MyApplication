@@ -12,7 +12,7 @@ public class BaseAPP extends Application {
         //初始化友盟AK  5ea8e6a00cafb2d93c0001ec友盟创建的应用的AK'
         UMConfigure.init(this,"5f0fb4ed9540fd07a29ff0da","umeng",UMConfigure.DEVICE_TYPE_PHONE,"");//58edcfeb310c93091c000be2 5965ee00734be40b580001a0
         //新浪微博  AK的生产需要报名和此项目一致，所以要到微博中申请
-        PlatformConfig.setSinaWeibo("1873289174", "5258957647fe33b8f82cf83a6d5fb3bd","http://sns.whalecloud.com");
+        PlatformConfig.setSinaWeibo("1384127819", "cdaf1dc2f4e836aad8d0f26ed59e41fb","http://sns.whalecloud.com");
         //微信的AK  现在微信平台限制严格，用不了
         PlatformConfig.setWeixin("wxdc1e388c3822c80b", "3baf1193c85774b3fd9d18447d76cab0");
         //qq空间  现在QQ平台限制严格，用不了

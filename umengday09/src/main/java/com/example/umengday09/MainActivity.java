@@ -2,6 +2,7 @@ package com.example.umengday09;
 
 import android.Manifest;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -15,6 +16,8 @@ import com.umeng.socialize.ShareAction;
 import com.umeng.socialize.UMShareAPI;
 import com.umeng.socialize.UMShareListener;
 import com.umeng.socialize.bean.SHARE_MEDIA;
+import com.umeng.socialize.editorpage.ShareActivity;
+import com.umeng.socialize.media.UMImage;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -80,6 +83,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 .setDisplayList(SHARE_MEDIA.SINA,SHARE_MEDIA.QQ,SHARE_MEDIA.WEIXIN)//分享到的平台 微博，qq，微信
                 .setCallback(umShareListener)//添加监听
                 .open();
+//        UMImage image = new UMImage(MainActivity.this, "imageurl");//网络图片
+//        UMImage image = new UMImage(MainActivity.this, file);//本地文件
+        UMImage image = new UMImage(MainActivity.this, R.drawable.an);//资源文件
+//        UMImage image = new UMImage(MainActivity.this, bitmap);//bitmap文件
+//        UMImage image = new UMImage(MainActivity.this, byte[]);//字节流
+       UMImage thumb =  new UMImage(this, R.drawable.an);
+        image.setThumb(thumb);
+        image.compressStyle = UMImage.CompressStyle.SCALE;//大小压缩，默认为大小压缩，适合普通很大的图
+        image.compressStyle = UMImage.CompressStyle.QUALITY;//质量压缩，适合长图的分享
+//        压缩格式设置
+//        image.compressFormat = Bitmap.CompressFormat.PNG;//用户分享透明背景的图片可以设置这种方式，但是qq好友，微信朋友圈，不支持透明背景图片，会变成黑色
+        new ShareAction(MainActivity.this).withText("hello").withMedia(image).share();
     }
     //分享的监听
     private UMShareListener umShareListener = new UMShareListener() {

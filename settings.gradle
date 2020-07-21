@@ -1,1 +1,2 @@
-include ':app', ':day1', ':day6', ':day07shijianfenfa', ':day06view', ':day08view', ':umengday09'
+include ':day12', ':easeui'
+//':app', ':day1', ':day6', ':day07shijianfenfa', ':day06view', ':day08view', ':umengday09', ':jiguangday10', ':huanxday11',
